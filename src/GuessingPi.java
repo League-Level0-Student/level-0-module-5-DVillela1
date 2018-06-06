@@ -15,18 +15,19 @@ public class GuessingPi {
 		// System.out.println(pi.charAt(i));
 	// }
 	
-	for (int i = 0; i < pi.length()-7; i++) {
-		System.out.println(pi.charAt());
-		String x = JOptionPane.showInputDialog("What is the next digit of pi?");
-		int xi = Integer.parseInt(x);
-		
-		if (xi == ) {
-			System.out.println("Correct.");
-			JOptionPane.showInputDialog("What is the next digit of pi?");
+	for (int i = 0; i < pi.length(); i++) {
+		System.out.println(pi.charAt(i));
+		String x = JOptionPane.showInputDialog("What is the next digit/character of pi?");
+		if (x.equals(pi.charAt(i+1) + "")) {
+			JOptionPane.showMessageDialog(null, "Correct!");
 		}
 		else {
-			System.out.println("Incorrect.");
+			JOptionPane.showMessageDialog(null, "Incorrect.");
+			for (int o = 0; o < 100; o++) {
+				System.out.println("");	
+			}
 			break;
+		}
 		}
 	}
 	// 1. Make a main method and make sure your program can run
@@ -57,5 +58,5 @@ public class GuessingPi {
 					//    to start over. Use 'break;' to break out of the loop.
 
 }
-}
+
 
